@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff00a6, #ffc300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.4s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #121212, #333);
+}
+
+main {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button,
+select {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+button:hover,
+select:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 15px;
+  font-size: 3rem;
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.box:hover:enabled {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.msg-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.5s ease;
+  z-index: 100;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .box {
+    font-size: 2.2rem;
+  }
+  .scoreboard {
+    font-size: 0.9rem;
+  }
+}
