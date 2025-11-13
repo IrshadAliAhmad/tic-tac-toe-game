@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  tic-tac-toe:
+    build: .
+    container_name: tic-tac-toe-pro
+    ports:
+      - "8080:80"   # access app on http://localhost:8080
+    restart: unless-stopped
