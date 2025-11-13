@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Tic Tac Toe</h1>
+    <div class="controls">
+      <select id="mode">
+        <option value="pvp">👫 2 Players</option>
+        <option value="ai">🤖 vs Computer</option>
+      </select>
+      <button id="themeBtn">🌞 Light Mode</button>
+      <button id="resetBtn">🔁 Reset</button>
+    </div>
+
+    <div class="scoreboard">
+      <div>X Wins: <span id="xWins">0</span></div>
+      <div>O Wins: <span id="oWins">0</span></div>
+      <div>Draws: <span id="draws">0</span></div>
+    </div>
+
+    <div class="game">
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+      <button class="box"></button>
+    </div>
+  </main>
+
+  <div class="msg-popup hidden" id="popup">
+    <p id="resultText">Winner!</p>
+    <button id="newGameBtn">Play Again</button>
+  </div>
+
+  <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3"></audio>
+  <audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3"></audio>
+  <audio id="drawSound" src="https://assets.mixkit.co/active_storage/sfx/1008/1008-preview.mp3"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
