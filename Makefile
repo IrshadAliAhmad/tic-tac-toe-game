@@ -27,3 +27,4 @@ down:
 logs:
 	$(DOCKER_COMPOSE) logs -f	
 clean:
+	$(DOCKER_COMPOSE) down --rmi all -v --remove-orphans	
