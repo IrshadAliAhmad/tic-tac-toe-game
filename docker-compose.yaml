@@ -3,7 +3,7 @@ version: "3.9"
 services:
   tic-tac-toe:
     build: .
-    container_name: tic-tac-toe-game
+    container_name: tictac_con
     ports:
       - "8080:80"   # access app on http://localhost:8080
     restart: unless-stopped
